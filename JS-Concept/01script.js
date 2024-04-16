@@ -36,3 +36,8 @@ function lexical(){
     }
 }
 lexical()
+
+
+/* Falsy value -> 0 false null undefined doucument.all 
+    apart from this falsy value all of Truthy values
+*/
