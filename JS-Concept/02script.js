@@ -123,4 +123,4 @@
                 console.log(this);
             })
 
-            /* this keyword is equal to whatever written befor addEventListener, in this button case
+            /* this keyword is equal to whatever written befor addEventListener, in this button case */
