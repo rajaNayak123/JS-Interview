@@ -124,3 +124,31 @@
             })
 
             /* this keyword is equal to whatever written befor addEventListener, in this button case */
+
+
+    /* 8-> call, apply, bind 
+           to change function's this value to some object of our choice we can us call apply & bind.
+
+        call & apply: but we want to change this keyword inside function from window to some other object ,
+        so we can use call
+        
+        apply also does same thing which call does but if function take parameter, then apply take function
+        arguments in a array
+        
+        */
+
+        function abc(num1, num2){
+            console.log(this)
+        }
+        var obj = {age:45}
+        abc.call(obj,[1,2])
+
+        /* bind: bind is very similar like call just that it doesn't calls the
+    function straightaway but returns the function to call it later whenever we want. */
+
+    function xyz(){
+        console.log(this)
+    }
+    var obj1 = {price:48}
+    var bindFun = xyz.bind(obj1)
+    bindFun();
