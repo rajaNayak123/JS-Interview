@@ -1,7 +1,11 @@
 /* 1-> Higher order fun:
     higher order functions are the function which accepts a function
     in a parameter or return a function or both
-    ex. forEach , Map method , filter */
+    ex. forEach , Map method , filter
+
+     -> forEach mein break or continue not allow
+     -> Map create new array
+    */
 
     function abs(){
 
@@ -45,7 +49,7 @@
          }
          // IIFE
          (function(){
-
+        
          })();
 
          /* IIFEs Are Commonly Used To Create A Private Scope For Your

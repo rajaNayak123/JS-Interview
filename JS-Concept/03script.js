@@ -25,11 +25,11 @@
      if promise is resolve run .then part */
 
 // Example1
-  var ans = new Promise((res,req)=>{
+  var ans = new Promise((res,rej)=>{
         if(true){
             return res()
         }else{
-            return  req()
+            return  rej()
         }
     })
 ans

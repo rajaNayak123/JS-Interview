@@ -1,0 +1,201 @@
+ 1. GitHub Integration
+How to fetch data from the GitHub API in React and display profile data using a GET request.
+
+2. Virtual DOM
+What is the Virtual DOM? (Learn)
+
+3. Component Types
+What are class-based and function-based components in React?
+
+4. State Management
+What is state management and hooks in React?
+
+
+
+
+
+                // assignment
+ 1. Find Your Bank
+
+Develop a Single Page Application using ReactJS.
+2. The application should render a list of banks fetched from the API
+3. There must be a dropdown to select cities (Take only 5 Cities), another dropdown
+for search categories (IFSC, branch, bank_name) etc.
+and a search bar.'Ex. city => Mumbai, category => IFSC, query => SBINXXXXXXX, this will filter all the banks in
+Mumbai on the basis of IFSC which is SBINXXXXXXX.
+Based on the values of these dropdowns and the search query, you will locally filter
+the bank list and render the results in the same table.
+
+
+                //question
+Is drag and drop possible using HTML5 and how? (Learn)
+
+How to handle Parallel API Requests in JavaScript. (Learn)
+
+What is useState() in React? (Learn)
+
+
+ 2. Task Manager
+Create a to-do list app using React.
+
+3. React based question
+    What are the key features of React? (Learn)
+    What is the virtual DOM in React? (Learn)
+    How is React different from other JavaScript libraries?
+    What are hooks and what are their different types? (Learn)
+    What is the useEffect hook, and how does it work? (Learn)
+    What is a React Router? (Learn)
+    What is useContext in React.js?
+    How do you create custom hooks in React?
+
+
+
+
+     1. Theory Question
+How to handle Parallel API Requests in JavaScript?
+What does the isNaN() function?
+Explain the Eventloop of Javascript.
+Is drag and drop possible using HTML5 and how? (Learn)
+Explain new input types provided by HTML5 for forms. (Learn)
+How to restore the default property value using CSS?
+
+
+2. Theory Question
+What is the difference between logical tags and physical tags? (Learn)
+What are the differences between controlled and uncontrolled components? (Learn)
+What is prop drilling in React?
+What is useState() in React?
+
+
+ 1. Theory Questions
+Define Javascript. (Learn)
+What is closure? (Learn)
+What is scopes in JS? (Learn)
+Give an example of Event loop? (Learn)
+What are modules in node.js? (Learn)
+How Does, CORS Work?
+How to restrict malicious users, from getting into the application? 
+
+
+
+1. Creating Custom Polyfills: Implementing myCall, myApply, and myBind Methods in JavaScript
+The problem statement requires creating your polyfills for the call, apply, and bind methods. Additionally, it should explain when it is appropriate to use each of these methods.
+Implement your own Function.prototype.apply without calling the native apply method. To avoid overwriting the actual Function.prototype.apply, implement the function as Function.prototype.myApply
+Implement your own Function.prototype.call without calling the native call method. To avoid overwriting the actual Function.prototype.call, implement the function as Function.prototype.myCall.
+Implement your own Function.prototype.bind without calling the native bind method. To avoid overwriting the actual Function.prototype.bind, implement the function as Function.prototype.myBind.
+
+2. Implementing Time-Limited Asynchronous Functions in JavaScript
+Given an asynchronous function fn and a duration t in milliseconds, create a new time-limited version of fn. This modified function should accept the same arguments as fn and adhere to the following rules:
+If fn completes within t milliseconds, the time-limited function should resolve with the result.
+If fn does not complete within t milliseconds, the time-limited function should be rejected with the message "Time Limit Exceeded".
+
+
+ 1. Machine Coding Problem in React
+Build a stopwatch widget that can measure how much time has passed. It shows the current timer with two buttons underneath: "Start/Stop" and "Reset".
+Requirements:
+- Start/Stop Button: Starts/stops the timer depending on whether the timer is running.
+- Reset: Resets the timer to 0 and stops the timer.
+- The timer shows the number of seconds elapsed, down to the millisecond.
+- Clicking on the timer should start/stop the timer. The Start/Stop button's label should be updated accordingly as well.
+- It'd be an optional addition to format the time to display in hh:mm:ss:ms format.
+
+
+ 2. Execute Asynchronous Functions in Parallel:
+Given an array of asynchronous functions, return a new promise. 
+Each function in the array accepts no arguments and returns a promise. 
+All the promises should be executed in parallel. This essentially creates a polyfill for Promise.all without using the inbuilt Promise.all method.
+
+
+ 1. Machine Coding Problem in React
+Build a popular arcade game where players attempt to hit moles as they pop up from holes in a board.
+- The game should have a grid of 9 holes.
+- When the game starts, a mole will pop up randomly from one of the holes.
+- The player must click on the mole to whack it. When the player whacks the mole, they will get a point.
+- If the player does not whack the mole within 1.5 seconds, the mole will disappear.
+- The next mole randomly appears from one of the holes and the process repeats.
+- The player has 15 seconds to hit as many moles as possible.
+- The game ends when the timer runs out, the score is displayed and the player has the option to play again.
+
+
+ 2. Timed Output
+Given an array of objects, print each element after the delay specified in the timer property of the object, where the timer is in milliseconds. For example, 'abc' will be printed after 3 seconds, and '123' will be printed after 4 seconds. The array is as follows:
+
+[  { value: "abc", timer: 3000 },  
+
+{ value: "123", timer: 4000 },
+
+{ value: "xyz", timer: 1000 } ]
+
+
+ 3. Toggle Highlight
+Create a toggler behaviour where clicking on one item should highlight it.
+document.querySelector("table").addEventListener("click", highlightCells);
+
+let selectedCell = null;
+
+function highlightCells(e) {
+ if (e.target.tagName === "TD") {
+   const currTd = e.target;
+
+   if (selectedCell) {
+     selectedCell.classList.remove("bgColor");
+   }
+
+   selectedCell = currTd;
+   selectedCell.classList.add("bgColor");
+ }
+}
+ 
+
+
+1. Dynamic Content Update Function in JavaScript
+
+Create a JavaScript function to dynamically update the content of a webpage. The function should:
+
+1. Accept parameters for the target element and new content.
+2. Update the inner HTML of the target element with the provided content.
+2. JavaScript Function for Adding Event Listeners to Multiple Elements
+
+Develop a JavaScript function to add event listeners to multiple elements on a webpage. The function should:
+1. Accept parameters for the target elements and event type.
+2. Attach event listeners to each target element for the specified event type.3. Resolve the promise with true if event listeners are successfully added, and reject with an error message if any errors occur.
+3. JavaScript Function for Storing Data in Local Storage
+
+Create a JavaScript function to store data in the browser's local storage. The function should:
+1. Accept parameters for the data key and value.
+2. Store the data in the browser's local storage.
+
+
+
+
+ 1. Building an Asynchronous JavaScript Function to Fetch User Information from a Database
+
+Design a JavaScript function to fetch user information from a database using an asynchronous API call? 
+
+The function should:
+
+1. Accept a unique user identifier as input.
+
+2. Use the provided API to retrieve the user's data from the database.
+
+3. Resolve the promise with the user's information if the API call is successful.
+
+4. Reject the promise with an error message if the API call fails or if the user does not exist in the database.
+2. Creating a JavaScript Form Validation Function for Error-Free Submissions
+
+Implement a JavaScript function to validate a form when it is submitted.(Link)
+
+The function should:
+
+1. Accept the form element as a parameter.
+
+2. Check if the required fields are filled out correctly.
+
+3. Prevent the form from submitting if validation fails, and display error messages to the user.
+3. Developing a React Form Validation Component for Seamless User Interaction
+
+Implement a React component to handle form validation upon submission.(Link) 
+
+The component should:
+
+1. Accept the form data as props.
