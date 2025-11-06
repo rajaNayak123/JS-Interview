@@ -1,5 +1,12 @@
+ what is optional chaining
+ difference btween higher oreder function and first order function
+ how to compare two array are equal or not
+ 
  1. GitHub Integration
 How to fetch data from the GitHub API in React and display profile data using a GET request.
+
+1. Create a typeahead search bar which gives suggestions as we type in it.
+1. What are closures and it's limitations and benefits with an example.
 
 2. Virtual DOM
 What is the Virtual DOM? (Learn)
@@ -10,9 +17,29 @@ What are class-based and function-based components in React?
 4. State Management
 What is state management and hooks in React?
 
+ 1. Flatten the object
+Given an object with a sub-object within it, write a function to flatten the object.
+
+2. Basic JavaScript Questions
+What are promises? (Learn)
+How does javascript handle asynchronous tasks? (Learn)
+Difference between async await and .then() functions. (Learn)
 
 
-
+ 1. React, NodeJS, redux, DBMS
+    A challenging task that I worked on.
+    What is state in React?
+    What are props in React? (Learn)
+    Different ways to manage state in React.
+    Why use Redux over local state or Context API?
+    Explain the architecture of Redux. (Learn)
+    What is Node.js? (Learn)
+    What is the event loop in Node.js? (Learn)
+    Different design principles I have followed in developing Node.js applications.
+    ORMs and ODMs that I have used in Node.js.
+    What are aggregations in MongoDB? (Learn)
+    How can we optimize queries in MongoDB?
+    How does MongoDB manage data replication? (Learn)
 
                 // assignment
  1. Find Your Bank
@@ -168,34 +195,61 @@ Create a JavaScript function to store data in the browser's local storage. The f
 
 
 
- 1. Building an Asynchronous JavaScript Function to Fetch User Information from a Database
-
+ 1.) Building an Asynchronous JavaScript Function to Fetch User Information from a Database
 Design a JavaScript function to fetch user information from a database using an asynchronous API call? 
-
 The function should:
 
 1. Accept a unique user identifier as input.
-
 2. Use the provided API to retrieve the user's data from the database.
-
 3. Resolve the promise with the user's information if the API call is successful.
-
 4. Reject the promise with an error message if the API call fails or if the user does not exist in the database.
-2. Creating a JavaScript Form Validation Function for Error-Free Submissions
 
+2.) Creating a JavaScript Form Validation Function for Error-Free Submissions
 Implement a JavaScript function to validate a form when it is submitted.(Link)
-
 The function should:
-
 1. Accept the form element as a parameter.
-
 2. Check if the required fields are filled out correctly.
-
 3. Prevent the form from submitting if validation fails, and display error messages to the user.
-3. Developing a React Form Validation Component for Seamless User Interaction
+
+
+
+3.) Developing a React Form Validation Component for Seamless User Interaction
 
 Implement a React component to handle form validation upon submission.(Link) 
-
 The component should:
-
 1. Accept the form data as props.
+
+
+ 4.) Create a e-wallet app
+An e-wallet should provide users with essential transaction management features, including adding, deleting, and viewing complete transaction details. These functionalities help users efficiently track and manage their finances. Users should be able to add transactions easily by entering key details such as the amount, transaction type (income or expense), date, category (e.g., food, travel, bills), and payment method (credit card, bank transfer, or wallet balance). The system should support both manual entry and automatic logging when linked to bank accounts or other payment services. To enhance usability, users should also be able to set recurring transactions for monthly bills or subscriptions.
+To maintain accurate financial records, users should have the option to delete transactions, which is helpful in cases of duplicate entries, incorrect amounts, or unauthorized transactions. A confirmation prompt should be included to prevent accidental deletions. Additionally, implementing an undo option or keeping a deletion history log can offer extra security, allowing users to recover mistakenly removed transactions.
+A detailed transaction history should be available, enabling users to filter and search by date, category, or transaction type. Each transaction should display relevant information such as the merchant name, transaction ID, and payment method. Advanced features like spending analysis, graphical summaries, and budget tracking can further enhance the user experience. Real-time notifications for completed transactions can also improve financial awareness.
+
+ 5.) String Concatenation Bug
+A social media company, InstaConnect, is building a new feature to allow users to share their favourite quotes. The feature is developed using React and JavaScript. The development team is using ES6 features to write more efficient and concise code. 
+The quote-sharing feature requires a function to concatenate the user's name with the quote text. 
+The function should take two parameters, userName and quoteText, and return a string in the format "userName: quoteText". 
+The team is using arrow functions to implement this functionality. However, the function is not working as expected, and the QA team is reporting issues with the concatenated string.
+Here is the code snippet:
+const generateQuote = (userName, quoteText) =>
+ userName + : + quoteText;
+What is the mistake in the above code snippet, and how can it be corrected?
+
+
+ 6.) Sorting Logic Issue
+
+A social media company, "SocialConnect", wants to develop a feature to display trending posts on their platform. 
+They have a large dataset of posts and want to filter out the top 10 trending posts based on the number of likes. 
+The development team has decided to use JavaScript for this task. They are using ES6 features to write efficient and concise code.
+The team leader, Rachel, has written a function getTrendingPosts that takes an array of post objects as an argument and returns an array of the top 10 trending posts. The post object has properties like id, title, content, and likes. Rachel wants to use arrow functions to simplify the code.
+Here is the code snippet:
+const getTrendingPosts = (posts) => {
+ // Sort the posts in descending order based on likes
+ const sortedPosts = posts.sort((a, b) => b.likes - a.likes);
+ 
+ // Filter out the top 10 trending posts
+ const trendingPosts = sortedPosts.slice(0, 10);
+ 
+ return trendingPosts;
+};
+What is wrong with this implementation?
