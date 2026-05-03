@@ -20,7 +20,7 @@ showMyScope(); // Logs "Raja"
 // Q2 What is lexical scope (also called static scope)?
 
 /*
-
+Lexical scope is when a function’s accessible variables are determined by the location where the function is defined, not where it’s called.
 
 Follow-up Questions
     -How does lexical scope make closures possible?
@@ -53,6 +53,59 @@ A closure is the combination of a function and the lexical environment within wh
 
     What is a practical use case for a closure? (e.g., data privacy, creating private variables).
 
+    1. Data privacy (encapsulation)
+    Keep variables private so they can’t be accessed directly from outside.
+
+      function createCounter() {
+        let count = 0; // private
+
+        return {
+          increment: () => ++count,
+          getCount: () => count
+        };
+      }
+
+      const counter = createCounter();
+      counter.increment();
+      console.log(counter.getCount()); // 1
+      // count is not directly accessible
+
+    2. Event handlers (very common in UI)
+    Closures help remember values when an event happens later.
+
+      function setupButton(buttonId) {
+        let message = "Button clicked!";
+
+        document.getElementById(buttonId).addEventListener("click", function() {
+          console.log(message); // remembers message
+        });
+      }
+
+    3. Function factories (customized functions)
+    Create reusable functions with preset values.
+
+      function multiplyBy(x) {
+        return function(y) {
+          return x * y;
+        };
+      }
+
+      const double = multiplyBy(2);
+      console.log(double(5)); // 10
+
+
+    4. setTimeout / async operations
+    Closures preserve values in async code.
+
+      function greet(name) {
+        setTimeout(function() {
+          console.log("Hello " + name);
+        }, 1000);
+      }
+
+      greet("Raja");
+
+      
     Can closures cause memory leaks? (Yes, if the "backpack" holds large objects that are no longer needed, but the inner function is still alive).
 
     Can you explain the classic "for loop and setTimeout" problem with var and how closures (and let) fix it?
