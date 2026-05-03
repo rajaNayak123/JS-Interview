@@ -65,7 +65,7 @@ testScope();// ReferenceError!
 
 /* 
 
-It's JavaScript's behavior of acting like it "moves" all variable and function declarations to the very top of their scope before it runs the code.
+Hoisting is JavaScript’s behavior of moving declarations (variables and functions) to the top of their scope before code execution.
 
 Function Declarations: Are hoisted entirely (both the name and the function body).
 
@@ -86,8 +86,9 @@ function sayHello() {
 }
 
 // Example 2: 'var' Hoisting
-console.log(myVar); // undefined (declaration was hoisted, not assignment)
-var myVar = 10;
+var a;        // hoisted (declaration)
+console.log(a); // undefined
+a = 10;       // initialization happens later
 
 // Example 3: 'let' and the TDZ
 // console.log(myLet); // ReferenceError: Cannot access 'myLet' before initialization
