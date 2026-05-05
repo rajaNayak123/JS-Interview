@@ -141,21 +141,73 @@ A Higher-Order Function (HOF) is any function that operates on other functions. 
 
     What does it mean for functions to be "first-class citizens"?
 
-    How would you write your own .map function from scratch?
+  How would you write your own .map function from scratch?
+  Ans: The idea is that we loop through each element in the array, apply a given function to it, and store the result in a new array. Here's a simple implementation:
+  Code:
+    function myMap(arr, func) {
+      let result = [];
+      for (let i = 0; i < arr.length; i++) {
+        result.push(func(arr[i], i, arr));
+      }
+      eturn result;
+    }
+
+    // Example usage:
+    let numbers = [1, 2, 3, 4];
+    let doubled = myMap(numbers, function(n) {
+      return n * 2;
+    });
+    console.log(doubled); // Output: [2, 4, 6, 8]
+
 */
 
-const numbers = [1, 2, 3];
+/*
+Can you name some common HOFs built into JavaScript?
+  1. map(): It takes a function and applies it to every element in an array, returning a new array. it does NOT modify the original one.
+      Code: 
+      let arr = [1,2,3,4,5,6]
+      let ans = arr.map((ele)=>ele*2)
+      console.log(ans)
 
-// 'doubleMe' is a regular function
-function doubleMe(num) {
-  return num * 2;
-}
+  2. filter(): It takes a function and returns a new array with only the elements that pass a test. it does NOT modify the original array.
+      Code:
+      let arr = [1, 2, 3, 4, 5, 6];
+      let evens = arr.filter((n) => n % 2 == 0);
+      console.log(evens)
 
-// '.map' is the Higher-Order Function.
-// It takes 'doubleMe' as an argument.
-const doubledNumbers = numbers.map(doubleMe);
+  3. reduce(): It takes a function that "reduces" the array down to a single value (like a sum or product). does NOT return a new array. It also does NOT modify the original array. It returns a single value
+      Code:
+      let arr = [1, 2, 3, 4];
+      let sum = arr.reduce((acc, curr) => {
+        return acc + curr;
+      }, 0);
+      console.log(sum);
 
-console.log(doubledNumbers); // [2, 4, 6]
+  4. forEach(): It just runs a function on each element, but it doesn't return anything.
+      Code:
+      let sum = 0;
+      [1, 2, 3, 4].forEach((num) => {
+        sum += num;
+      });
+      console.log(sum); // 10
+
+      // ❌ WRONG
+      let doubled = arr.forEach(num => num * 2);
+
+      forEach() itself does NOT modify the original array …but it can, depending on what you do inside it.
+      Code:
+      let arr = [1, 2, 3];
+      arr.forEach((num, index, array) => {
+        array[index] = num * 2;
+      });
+
+      console.log(arr); // [2, 4, 6] ❗ changed
+
+  5. find(): The find function returns the first element in the array that satisfies a given condition.
+  6. some(): The some function checks if at least one array element satisfies a condition.
+  7. every(): The every function checks if all array elements satisfy a condition.
+*/
+
 
 // Q4 What is a callback function?
 
